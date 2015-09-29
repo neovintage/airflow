@@ -60,6 +60,7 @@ defaults = {
         'secret_key': 'airflowified',
         'expose_config': False,
         'threads': 4,
+        'preferred_url_scheme': 'http',
     },
     'scheduler': {
         'statsd_on': False,
@@ -142,6 +143,8 @@ authenticate = False
 
 # Filter the list of dags by owner name (requires authentication to be enabled)
 filter_by_owner = False
+
+preferred_url_scheme = http
 
 [smtp]
 # If you want airflow to send emails on retries, failure, and you want to
@@ -251,6 +254,7 @@ load_examples = True
 base_url = http://localhost:8080
 web_server_host = 0.0.0.0
 web_server_port = 8080
+preferred_url_scheme = http
 
 [smtp]
 smtp_host = localhost

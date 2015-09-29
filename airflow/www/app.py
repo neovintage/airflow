@@ -166,6 +166,7 @@ utils.pessimistic_connection_handling()
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_POOL_RECYCLE'] = 3600
+app.config['PREFERRED_URL_SCHEME'] = conf.get('webserver', 'PREFERRED_URL_SCHEME')
 app.secret_key = conf.get('webserver', 'SECRET_KEY')
 
 login.login_manager.init_app(app)
